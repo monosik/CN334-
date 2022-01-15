@@ -16,21 +16,15 @@
                 </div>
             </div>
             <table class="w-full text-md rounded mb-4">
-                <thead>
-                <tr class="border-b">
-                    <th class="text-left p-3 px-5">Task</th>
-                    <th class="text-left p-3 px-5">Actions</th>
-                    <th></th>
-                </tr>
-                </thead>
+                
                 <tbody>
                 @foreach(auth()->user()->tasks as $task)
                     <tr class="border-b hover:bg-orange-100">
-                        <td class="p-3 px-5">
+                        <td class="p-3 px-5"><a href="/task/{{$task->id}}" name="edit" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-black py-1 px-2 rounded focus:outline-none focus:shadow-outline">Edit</a>
                             {{$task->description}}
                         </td>
                         <td class="p-3 px-5">
-                            <a href="/task/{{$task->id}}" name="edit" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-black py-1 px-2 rounded focus:outline-none focus:shadow-outline">Edit</a>
+                            
                             <form action="/task/{{$task->id}}" class="inline-block">
                                 <button type="submit" name="delete" formmethod="POST" class="text-sm bg-red-500 hover:bg-red-700 text-black py-1 px-2 rounded focus:outline-none focus:shadow-outline">Delete</button>
                                 {{ csrf_field() }}
