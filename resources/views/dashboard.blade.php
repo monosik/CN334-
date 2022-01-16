@@ -6,6 +6,7 @@
 </x-slot>
 
 <div class="py-12">
+<img src="https://media.npr.org/assets/img/2021/08/11/gettyimages-1279899488_wide-f3860ceb0ef19643c335cb34df3fa1de166e2761-s1100-c50.jpg" alt="Stickman" style="display: center; margin-left:auto; margin-right:auto; margin-bottom: 20px">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-5">
             <div class="flex">
