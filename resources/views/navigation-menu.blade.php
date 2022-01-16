@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                        <img src="https://cdn.discordapp.com/attachments/703965223316357170/932216797975941190/images.png" alt="Stickman" width="45px", height="45px">
                     </a>
                 </div>
 
