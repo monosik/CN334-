@@ -6,13 +6,13 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <img src="https://cdn.discordapp.com/attachments/703965223316357170/932216797975941190/images.png" alt="Stickman" width="45px", height="45px">
+                        <img src="https://cdn.discordapp.com/attachments/703965223316357170/932216797975941190/images.png" alt="Stickman"  class="block h-10 w-auto" />
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')" style="font-family: 'Press Start 2P', cursive; font-size: 15px;">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
                 </div>
@@ -27,7 +27,6 @@
                                 <span class="inline-flex rounded-md">
                                     <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition">
                                         {{ Auth::user()->currentTeam->name }}
-
                                         <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                             <path fill-rule="evenodd" d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
                                         </svg>
@@ -35,7 +34,7 @@
                                 </span>
                             </x-slot>
 
-                            <x-slot name="content">
+                            <x-slot name="content" >
                                 <div class="w-60">
                                     <!-- Team Management -->
                                     <div class="block px-4 py-2 text-xs text-gray-400">
@@ -79,7 +78,7 @@
                                 </button>
                             @else
                                 <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
+                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition" style="font-family: 'Press Start 2P', cursive; font-size: 10px;">
                                         {{ Auth::user()->name }}
 
                                         <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -92,11 +91,11 @@
 
                         <x-slot name="content">
                             <!-- Account Management -->
-                            <div class="block px-4 py-2 text-xs text-gray-400">
+                            <div class="block px-4 py-2 text-xs text-gray-400" style="font-family: 'Press Start 2P', cursive; font-size: 6px;">
                                 {{ __('Manage Account') }}
                             </div>
 
-                            <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                            <x-jet-dropdown-link href="{{ route('profile.show') }}" style="font-family: 'Press Start 2P', cursive; font-size: 8px;">
                                 {{ __('Profile') }}
                             </x-jet-dropdown-link>
 
@@ -114,7 +113,7 @@
 
                                 <x-jet-dropdown-link href="{{ route('logout') }}"
                                          onclick="event.preventDefault();
-                                                this.closest('form').submit();">
+                                                this.closest('form').submit();" style="font-family: 'Press Start 2P', cursive; font-size: 8px;">
                                     {{ __('Log Out') }}
                                 </x-jet-dropdown-link>
                             </form>
